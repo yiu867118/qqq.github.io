@@ -7,8 +7,28 @@
         <title>小小熊</title>
         <style>
             body{
-                background-color:black;
+                background-color:white;
             }
+            #title{
+            background: linear-gradient(to right, black, black); /* 渐变浅蓝色背景 */
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            font-weight: bold;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            margin-bottom: 20px;
+            }
+            .container {
+            max-width: 800px;
+            margin: 20px auto;
+            border-width: 7px;
+            border-style: dotted;
+            border-color:lightskyblue;
+            border-radius: 20px;
+            box-shadow: 0 0 5px rgba(40, 40, 40, 0.1),
+                        0 0 25px rgb(70, 70, 70)1);
+        }
 
             #a, #b, #c, #d, #e, #f{
                 display:inline-block;
@@ -19,10 +39,10 @@
             }
 
             #b{
-                margin-left:35%}
+                margin-left:7%}
 
             #c{
-                margin-left: 30%;
+                margin-left: 4%;
             }
             #a, #c{
                 transition: margin-left 1s
@@ -53,7 +73,7 @@
 
             @keyframes bomb{
                 0%{margin-left: 0;}
-                50%{margin-left: 9%;}
+                50%{margin-left: 3%;}
                 100%{margin-left: 0;}
             }
             #d, #e, #f, #g, #h{
@@ -64,7 +84,7 @@
 
             @keyframes bob{
                 0%{margin-left: 0;}
-                50%{margin-left: 50%;}
+                50%{margin-left: 10%;}
                 100%{margin-left: 0;}
             }
 
@@ -83,9 +103,9 @@
             }
 
             @keyframes bo{
-                0%{margin-left: 20%;}
-                50%{margin-left: 70%;}
-                100%{margin-left: 20%;}
+                0%{margin-left: 3%;}
+                50%{margin-left: 10%;}
+                100%{margin-left: 3%;}
             }
             h6{
                 animation-name: bo;
@@ -99,6 +119,9 @@
             }
 
             .q:hover{transform: rotate(20deg)}
+
+
+
 
             @media screen and (max-width: 768px) {
                 #a{
@@ -151,22 +174,26 @@
         </style>
     </head>
     <body>
-        <div>
-            <img id="a" src="8.jpg"  width="120px" height="160px">
+        <div class="container" id="title">
+            <img id="a" src="8.jpg"  width="90px" height="120px">
             <h3 id="b">小小熊</h3>
-            <img id="c" src="11.jpg" width="120px" height="160px">
-        </div>
+            <img id="c" src="11.jpg" width="90px" height="120px">
+        
         <hr>
-        <p>小小熊头是一只四个月大的小熊,喜欢睡觉, 委屈哭哭和宅在家</p>
+        <br>
+        <p>这是一只四个月大的小熊,喜欢睡觉, 委屈哭哭和宅在家</p>
+        <br>
+        <br>
+        <br>
     
         <div>
-            <img id="d" class="q" src="13.jpg" width="180px" height="120px" alt="">
-            <img id="e" class="q" src="10.jpg" width="150px" height="170px" alt="">
-            <img id="f" class="q" src="2.jpg" width="150px" height="170px" alt="">
-            <img id="g" class="q" src="12.jpg" width="120px" height="180px" alt="">
-            <img id="h" class="q" src="9.jpg" width="180px" height="120px" alt="">
+            <img id="d" class="q" src="13.jpg" width="130px" height="90px" alt="">
+            <img id="e" class="q" src="10.jpg" width="100px" height="120px" alt="">
+            <img id="f" class="q" src="2.jpg" width="100px" height="120px" alt="">
+            <img id="g" class="q" src="12.jpg" width="80px" height="120px" alt="">
+            <img id="h" class="q" src="9.jpg" width="130px" height="90px" alt="">
         </div>
-       
         
+    </div>
     </body>
 </html>
