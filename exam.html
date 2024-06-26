@@ -71,9 +71,63 @@
         .legend .decrease {
             background-color: red;
         }
+        #div{
+            background: linear-gradient(to right, #f8fafb, hsl(203, 76%, 97%));
+            margin-left: 1%;
+            margin-right: 1%;
+            margin: 10px auto;
+            padding: 20px;
+            border-radius: 60px;
+            width: 90%;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            line-height: 1.8;
+            font-size: 19px;
+            font-weight: 600;
+        }
+        #toggleButton {
+            background: linear-gradient(to right, #c5dbe9, #a4cadf);
+            color: #fff;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px; 
+            display: inline-block; 
+            font-size: 16px;
+        }
+        #toggleButton:hover{
+            background: linear-gradient(to right, #40b9ec, #3bb1e4); 
+        }
+
     </style>
+    
 </head>
 <body>
+    <div id="div">
+        <form id="columnForm">
+            <fieldset>
+                <legend>选择要显示的列</legend>
+                <label><input type="checkbox" name="column" value="序号" checked> 序号</label>
+                <label><input type="checkbox" name="column" value="大学" checked> 大学</label>
+                <label><input type="checkbox" name="column" value="学校顺位" checked> 学校顺位</label>
+                <label><input type="checkbox" name="column" value="专业" checked> 专业</label>
+                <label><input type="checkbox" name="column" value="专业顺位" checked> 专业顺位</label>
+                <label><input type="checkbox" name="column" value="学校+专业总顺位" checked> 学校+专业总顺位</label>
+                <label><input type="checkbox" name="column" value="2024招生计划数" checked> 2024招生计划数</label>
+                <label><input type="checkbox" name="column" value="2023招生计划数" checked> 2023招生计划数</label>
+                <label><input type="checkbox" name="column" value="2022招生计划数" checked> 2022招生计划数</label>
+                <label><input type="checkbox" name="column" value="2023最低分" checked> 2023最低分</label>
+                <label><input type="checkbox" name="column" value="2023最低位次" checked> 2023最低位次</label>
+                <label><input type="checkbox" name="column" value="2022最低分" checked> 2022最低分</label>
+                <label><input type="checkbox" name="column" value="2022最低位次" checked> 2022最低位次</label>
+                <label><input type="checkbox" name="column" value="备注" checked> 备注</label>
+            </fieldset>
+            
+        </form>
+        <button id="toggleButton">确定</button>
+        
+    </div>
     <table>
         <caption>傻蛋志愿填报参考信息表</caption>
         <br>
@@ -81,6 +135,7 @@
         <br>
         <thead>
             <tr>
+                <th>序号</th>
                 <th>大学</th>
                 <th>学校顺位</th>
                 <th>专业</th>
@@ -98,6 +153,7 @@
         </thead>
         <tbody>
             <tr>
+                <td>1</td>
                 <td>北京第二外国语学院</td>
                 <td>1</td>
                 <td>朝鲜语</td>
@@ -113,6 +169,7 @@
                 <td class="decrease">换专业有难度</td>
             </tr>
             <tr>
+                <td>2</td>
                 <td>青岛大学</td>
                 <td>5</td>
                 <td>历史学</td>
@@ -128,6 +185,7 @@
                 <td class="no-change">新增专业</td>
             </tr>
             <tr>
+                <td>3</td>
                 <td>天津师范大学</td>
                 <td>2</td>
                 <td>朝鲜语</td>
@@ -143,6 +201,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>4</td>
                 <td>天津外国语大学</td>
                 <td>3</td>
                 <td>朝鲜语</td>
@@ -158,6 +217,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>5</td>
                 <td>山东建筑大学</td>
                 <td>7</td>
                 <td>电子商务</td>
@@ -173,6 +233,7 @@
                 <td class="no-change">招生计划持平</td>
             </tr>
             <tr>
+                <td>6</td>
                 <td>山东中医药大学</td>
                 <td>4</td>
                 <td>健康服务与管理</td>
@@ -188,6 +249,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>7</td>
                 <td>山东中医药大学</td>
                 <td>4</td>
                 <td>运动康复</td>
@@ -203,6 +265,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>8</td>
                 <td>青岛农业大学</td>
                 <td>9</td>
                 <td>知识产权</td>
@@ -218,6 +281,7 @@
                 <td class="increase-large">招生计划大幅增加</td>
             </tr>
             <tr>
+                <td>9</td>
                 <td>青岛农业大学</td>
                 <td>9</td>
                 <td>电子商务</td>
@@ -233,6 +297,7 @@
                 <td class="increase-small">招生计划增加</td>
             </tr>
             <tr>
+                <td>10</td>
                 <td>山东理工大学</td>
                 <td>8</td>
                 <td>金融学</td>
@@ -248,6 +313,7 @@
                 <td class="no-change">新增专业</td>
             </tr>
             <tr>
+                <td>11</td>
                 <td>济南大学</td>
                 <td>10</td>
                 <td>应用心理学</td>
@@ -263,6 +329,7 @@
                 <td class="no-change">新增专业</td>
             </tr>
             <tr>
+                <td>12</td>
                 <td>青岛农业大学</td>
                 <td>9</td>
                 <td>朝鲜语</td>
@@ -278,6 +345,7 @@
                 <td class="decrease">招生计划下降</td>
             </tr>
             <tr>
+                <td>13</td>
                 <td>济南大学</td>
                 <td>10</td>
                 <td>金融学</td>
@@ -293,6 +361,7 @@
                 <td class="no-change">新增专业</td>
             </tr>
             <tr>
+                <td>14</td>
                 <td>济南大学</td>
                 <td>10</td>
                 <td>经济学</td>
@@ -308,6 +377,7 @@
                 <td class="no-change">新增专业</td>
             </tr>
             <tr>
+                <td>15</td>
                 <td>山东中医药大学</td>
                 <td>4</td>
                 <td>英语</td>
@@ -323,6 +393,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>16</td>
                 <td>山东农业大学</td>
                 <td>6</td>
                 <td>商务英语</td>
@@ -338,6 +409,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>17</td>
                 <td>大连外国语大学</td>
                 <td>12</td>
                 <td>朝鲜语</td>
@@ -353,6 +425,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>18</td>
                 <td>济南大学</td>
                 <td>10</td>
                 <td>建筑学</td>
@@ -368,6 +441,7 @@
                 <td class="no-change">新增专业</td>
             </tr>
             <tr>
+                <td>19</td>
                 <td>大连民族大学</td>
                 <td>13</td>
                 <td>朝鲜语</td>
@@ -383,6 +457,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>20</td>
                 <td>山东政法学院</td>
                 <td>17</td>
                 <td>知识产权</td>
@@ -398,6 +473,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>21</td>
                 <td>济南大学</td>
                 <td>10</td>
                 <td>会计学</td>
@@ -413,6 +489,7 @@
                 <td class="no-change">新增专业</td>
             </tr>
             <tr>
+                <td>22</td>
                 <td>浙江外国语学院</td>
                 <td>15</td>
                 <td>朝鲜语</td>
@@ -428,6 +505,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>23</td>
                 <td>华北理工大学</td>
                 <td>14</td>
                 <td>医疗保险</td>
@@ -443,6 +521,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>24</td>
                 <td>烟台大学</td>
                 <td>15</td>
                 <td>朝鲜语</td>
@@ -458,6 +537,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>25</td>
                 <td>青岛农业大学</td>
                 <td>9</td>
                 <td>英语</td>
@@ -473,6 +553,7 @@
                 <td class="increase-small">招生计划增加</td>
             </tr>
             <tr>
+                <td>26</td>
                 <td>鲁东大学</td>
                 <td>16</td>
                 <td>朝鲜语</td>
@@ -488,6 +569,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>27</td>
                 <td>北华航天工业学院(廊坊,靠近北京)</td>
                 <td>19</td>
                 <td>电子商务</td>
@@ -503,6 +585,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>28</td>
                 <td>聊城大学</td>
                 <td>21</td>
                 <td>知识产权</td>
@@ -518,6 +601,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>29</td>
                 <td>山东政法学院</td>
                 <td>17</td>
                 <td>新闻学(法治新闻方向)</td>
@@ -533,6 +617,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>30</td>
                 <td>青岛农业大学</td>
                 <td>9</td>
                 <td>公共事业管理</td>
@@ -548,6 +633,7 @@
                 <td class="increase-large">招生计划大幅增加</td>
             </tr>
             <tr>
+                <td>31</td>
                 <td>大连民族大学</td>
                 <td>13</td>
                 <td>国际商务</td>
@@ -563,6 +649,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>32</td>
                 <td>曲阜师范大学</td>
                 <td>18</td>
                 <td>翻译(日照校区)</td>
@@ -578,6 +665,7 @@
                 <td class="decrease">招生人数大幅减少</td>
             </tr>
             <tr>
+                <td>33</td>
                 <td>吉林财经大学</td>
                 <td>20</td>
                 <td>朝鲜语</td>
@@ -593,6 +681,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>34</td>
                 <td>临沂大学</td>
                 <td>23</td>
                 <td>电子商务</td>
@@ -608,6 +697,7 @@
                 <td class="increase-large">招生计划大幅增加</td>
             </tr>
             <tr>
+                <td>35</td>
                 <td>浙江外国语学院</td>
                 <td>11</td>
                 <td>旅游管理(全英教学)(保底)</td>
@@ -623,6 +713,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>36</td>
                 <td>临沂大学</td>
                 <td>23</td>
                 <td>应用心理学</td>
@@ -638,6 +729,7 @@
                 <td class="increase-small">招生计划增加</td>
             </tr>
             <tr>
+                <td>37</td>
                 <td>北方民族大学(宁夏回族自治区)</td>
                 <td>24</td>
                 <td>电子商务</td>
@@ -653,6 +745,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>38</td>
                 <td>齐鲁工业大学</td>
                 <td>22</td>
                 <td>翻译</td>
@@ -668,6 +761,7 @@
                 <td></td>
             </tr>
             <tr>
+                <td>39</td>
                 <td>江西师范大学</td>
                 <td>21</td>
                 <td>国际经济与贸易(数字贸易)</td>
@@ -684,5 +778,26 @@
             </tr>
         </tbody>
     </table>
+    
+    <script>
+        var button = document.getElementById('toggleButton');
+        button.addEventListener('click', toggleColumns);
+
+        function toggleColumns() {
+            var form = document.getElementById('columnForm');
+            var checkboxes = form.querySelectorAll('input[name="column"]');
+            var table = document.querySelector('table');
+
+            checkboxes.forEach(function(checkbox) {
+                var columnIndex = Array.from(table.rows[0].cells).findIndex(cell => cell.textContent.trim() === checkbox.value);
+                if (columnIndex !== -1) {
+                    var cells = table.querySelectorAll('tbody tr td:nth-child(' + (columnIndex + 1) + '), thead tr th:nth-child(' + (columnIndex + 1) + ')');
+                    cells.forEach(cell => {
+                        cell.style.display = checkbox.checked ? 'table-cell' : 'none';
+                    });
+                }
+            });
+        }
+    </script>
 </body>
 </html>
