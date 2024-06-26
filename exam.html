@@ -34,6 +34,42 @@
             margin-bottom: 10px;
             font-size: 1.2em;
             font-weight: bold;
+        }    
+        .increase-large {
+            background-color: rgb(41, 155, 41);
+            color: white;
+        }
+        .increase-small {
+            background-color: lightgreen;
+        }
+        .no-change {
+            background-color: rgb(136, 216, 248);
+            color: white;
+        }
+        .decrease {
+            background-color: rgb(248, 164, 164);
+            color: white;
+        }
+        .legend {
+            margin-top: 20px;
+        }
+        .legend span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+        .legend .increase-large {
+            background-color: rgb(41, 155, 41);
+        }
+        .legend .increase-small {
+            background-color: lightgreen;
+        }
+        .legend .no-change {
+            background-color: blue;
+        }
+        .legend .decrease {
+            background-color: red;
         }
     </style>
 </head>
@@ -46,7 +82,10 @@
         <thead>
             <tr>
                 <th>大学</th>
+                <th>学校顺位</th>
                 <th>专业</th>
+                <th>专业顺位</th>
+                <th>学校+专业总顺位</th>
                 <th>2024招生计划数</th>
                 <th>2023招生计划数</th>
                 <th>2022招生计划数</th>
@@ -59,104 +98,11 @@
         </thead>
         <tbody>
             <tr>
-                <td>青岛农业大学</td>
-                <td>知识产权</td>
-                <td>90</td>
-                <td>52</td>
-                <td>43</td>
-                <td>530</td>
-                <td>106492</td>
-                <td>520</td>
-                <td>108266</td>
-                <td>招生计划增大幅加</td>
-            </tr>
-            <tr>
-                <td>青岛农业大学</td>
-                <td>英语</td>
-                <td>111</td>
-                <td>81</td>
-                <td>92</td>
-                <td>521</td>
-                <td>123717</td>
-                <td>522</td>
-                <td>105034</td>
-                <td>招生计划增加</td>
-            </tr>
-            <tr>
-                <td>烟台大学</td>
-                <td>朝鲜语</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>512</td>
-                <td>142344</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>青岛农业大学</td>
-                <td>电子商务</td>
-                <td>103</td>
-                <td>86</td>
-                <td>76</td>
-                <td>510</td>
-                <td>145138</td>
-                <td>509</td>
-                <td>130522</td>
-                <td>招生计划增加</td>
-            </tr>
-            <tr>
-                <td>青岛农业大学</td>
-                <td>公共事业管理</td>
-                <td>148</td>
-                <td>94</td>
-                <td>77</td>
-                <td>510</td>
-                <td>145651</td>
-                <td>507</td>
-                <td>133622</td>
-                <td>招生计划大幅增加</td>
-            </tr>
-            <tr>
-                <td>青岛农业大学</td>
-                <td>朝鲜语</td>
-                <td>45</td>
-                <td>52</td>
-                <td>49</td>
-                <td>497</td>
-                <td>175333</td>
-                <td>501</td>
-                <td>147587</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>吉林财经大学</td>
-                <td>朝鲜语</td>
-                <td>2</td>
-                <td></td>
-                <td></td>
-                <td>493</td>
-                <td>183920</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>鲁东大学</td>
-                <td>朝鲜语</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>493</td>
-                <td>184978</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
                 <td>北京第二外国语学院</td>
-                <td>朝鲜语(外语单科成绩不低于90分)</td>
+                <td>1</td>
+                <td>朝鲜语</td>
+                <td>5</td>
+                <td>6</td>
                 <td>1</td>
                 <td></td>
                 <td></td>
@@ -164,83 +110,74 @@
                 <td>192666</td>
                 <td></td>
                 <td></td>
-                <td>换专业有难度</td>
+                <td class="decrease">换专业有难度</td>
             </tr>
             <tr>
-                <td>大连民族大学</td>
-                <td>朝鲜语</td>
+                <td>青岛大学</td>
+                <td>5</td>
+                <td>历史学</td>
+                <td>1</td>
+                <td>6</td>
+                <td>30</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="no-change">新增专业</td>
+            </tr>
+            <tr>
+                <td>天津师范大学</td>
                 <td>2</td>
-                <td>2</td>
-                <td></td>
-                <td>464</td>
-                <td>256599</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>大连外国语大学</td>
                 <td>朝鲜语</td>
+                <td>5</td>
+                <td>7</td>
                 <td></td>
-                <td>13</td>
                 <td></td>
-                <td>457</td>
-                <td>274482</td>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
-                <td>山东政法学院</td>
-                <td>知识产权</td>
+                <td>天津外国语大学</td>
+                <td>3</td>
+                <td>朝鲜语</td>
+                <td>5</td>
+                <td>8</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>532</td>
-                <td>102535</td>
+                <td></td>
+                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
                 <td>山东建筑大学</td>
+                <td>7</td>
                 <td>电子商务</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>2</td>
+                <td>9</td>
+                <td>58</td>
+                <td>58</td>
+                <td>60</td>
                 <td>513</td>
-                <td>140146</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>北方民族大学</td>
-                <td>电子商务</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>140290</td>
                 <td>510</td>
-                <td>145331</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>129051</td>
+                <td class="no-change">招生计划持平</td>
             </tr>
             <tr>
                 <td>山东中医药大学</td>
-                <td>英语</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>山东政法学院</td>
-                <td>新闻学(法治新闻方向)</td>
+                <td>4</td>
+                <td>健康服务与管理</td>
+                <td>6</td>
+                <td>10</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -252,7 +189,130 @@
             </tr>
             <tr>
                 <td>山东中医药大学</td>
+                <td>4</td>
                 <td>运动康复</td>
+                <td>6</td>
+                <td>10</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>青岛农业大学</td>
+                <td>9</td>
+                <td>知识产权</td>
+                <td>1</td>
+                <td>10</td>
+                <td>90</td>
+                <td>52</td>
+                <td>43</td>
+                <td>530</td>
+                <td>106492</td>
+                <td>520</td>
+                <td>108266</td>
+                <td class="increase-large">招生计划大幅增加</td>
+            </tr>
+            <tr>
+                <td>青岛农业大学</td>
+                <td>9</td>
+                <td>电子商务</td>
+                <td>2</td>
+                <td>11</td>
+                <td>103</td>
+                <td>86</td>
+                <td>76</td>
+                <td>510</td>
+                <td>145138</td>
+                <td>509</td>
+                <td>130522</td>
+                <td class="increase-small">招生计划增加</td>
+            </tr>
+            <tr>
+                <td>山东理工大学</td>
+                <td>8</td>
+                <td>金融学</td>
+                <td>4</td>
+                <td>12</td>
+                <td>66</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="no-change">新增专业</td>
+            </tr>
+            <tr>
+                <td>济南大学</td>
+                <td>10</td>
+                <td>应用心理学</td>
+                <td>3</td>
+                <td>13</td>
+                <td>37</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="no-change">新增专业</td>
+            </tr>
+            <tr>
+                <td>青岛农业大学</td>
+                <td>9</td>
+                <td>朝鲜语</td>
+                <td>5</td>
+                <td>14</td>
+                <td>45</td>
+                <td>52</td>
+                <td>49</td>
+                <td>497</td>
+                <td>175333</td>
+                <td>501</td>
+                <td>147587</td>
+                <td class="decrease">招生计划下降</td>
+            </tr>
+            <tr>
+                <td>济南大学</td>
+                <td>10</td>
+                <td>金融学</td>
+                <td>4</td>
+                <td>14</td>
+                <td>106</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="no-change">新增专业</td>
+            </tr>
+            <tr>
+                <td>济南大学</td>
+                <td>10</td>
+                <td>经济学</td>
+                <td>4</td>
+                <td>14</td>
+                <td>23</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="no-change">新增专业</td>
+            </tr>
+            <tr>
+                <td>山东中医药大学</td>
+                <td>4</td>
+                <td>英语</td>
+                <td>12</td>
+                <td>16</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -264,7 +324,10 @@
             </tr>
             <tr>
                 <td>山东农业大学</td>
+                <td>6</td>
                 <td>商务英语</td>
+                <td>11</td>
+                <td>17</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -275,20 +338,71 @@
                 <td></td>
             </tr>
             <tr>
-                <td>齐鲁工业大学</td>
-                <td>翻译</td>
+                <td>大连外国语大学</td>
+                <td>12</td>
+                <td>朝鲜语</td>
+                <td>5</td>
+                <td>17</td>
                 <td></td>
+                <td>13</td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>457</td>
+                <td>274482</td>
                 <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
-                <td>山东中医药大学</td>
-                <td>健康服务与管理</td>
+                <td>济南大学</td>
+                <td>10</td>
+                <td>建筑学</td>
+                <td>8</td>
+                <td>18</td>
+                <td>18</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="no-change">新增专业</td>
+            </tr>
+            <tr>
+                <td>大连民族大学</td>
+                <td>13</td>
+                <td>朝鲜语</td>
+                <td>5</td>
+                <td>18</td>
+                <td>2</td>
+                <td>2</td>
+                <td></td>
+                <td>464</td>
+                <td>256599</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>山东政法学院</td>
+                <td>17</td>
+                <td>知识产权</td>
+                <td>1</td>
+                <td>18</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>532</td>
+                <td>102535</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>济南大学</td>
+                <td>10</td>
+                <td>会计学</td>
+                <td>9</td>
+                <td>19</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -296,11 +410,14 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td class="no-change">新增专业</td>
             </tr>
             <tr>
                 <td>浙江外国语学院</td>
-                <td>旅游管理(全英教学)(保底)</td>
+                <td>15</td>
+                <td>朝鲜语</td>
+                <td>5</td>
+                <td>20</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -312,7 +429,10 @@
             </tr>
             <tr>
                 <td>华北理工大学</td>
+                <td>14</td>
                 <td>医疗保险</td>
+                <td>6</td>
+                <td>20</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -323,20 +443,116 @@
                 <td></td>
             </tr>
             <tr>
-                <td>江西师范大学</td>
-                <td>国际经济与贸易(数字贸易)</td>
+                <td>烟台大学</td>
+                <td>15</td>
+                <td>朝鲜语</td>
+                <td>5</td>
+                <td>20</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
+                <td>512</td>
+                <td>142344</td>
                 <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
-                <td>北华航天工业学院</td>
+                <td>青岛农业大学</td>
+                <td>9</td>
+                <td>英语</td>
+                <td>12</td>
+                <td>21</td>
+                <td>111</td>
+                <td>81</td>
+                <td>92</td>
+                <td>521</td>
+                <td>123717</td>
+                <td>522</td>
+                <td>105034</td>
+                <td class="increase-small">招生计划增加</td>
+            </tr>
+            <tr>
+                <td>鲁东大学</td>
+                <td>16</td>
+                <td>朝鲜语</td>
+                <td>5</td>
+                <td>21</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>493</td>
+                <td>184978</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>北华航天工业学院(廊坊,靠近北京)</td>
+                <td>19</td>
                 <td>电子商务</td>
+                <td>2</td>
+                <td>21</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>聊城大学</td>
+                <td>21</td>
+                <td>知识产权</td>
+                <td>1</td>
+                <td>22</td>
+                <td>70</td>
+                <td></td>
+                <td>80</td>
+                <td></td>
+                <td></td>
+                <td>511</td>
+                <td>126968</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>山东政法学院</td>
+                <td>17</td>
+                <td>新闻学(法治新闻方向)</td>
+                <td>6</td>
+                <td>23</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>青岛农业大学</td>
+                <td>9</td>
+                <td>公共事业管理</td>
+                <td>14</td>
+                <td>23</td>
+                <td>148</td>
+                <td>94</td>
+                <td>77</td>
+                <td>510</td>
+                <td>145651</td>
+                <td>507</td>
+                <td>133622</td>
+                <td class="increase-large">招生计划大幅增加</td>
+            </tr>
+            <tr>
+                <td>大连民族大学</td>
+                <td>13</td>
+                <td>国际商务</td>
+                <td>10</td>
+                <td>23</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -348,7 +564,55 @@
             </tr>
             <tr>
                 <td>曲阜师范大学</td>
-                <td>翻译(外语语种为英语，日照校区)</td>
+                <td>18</td>
+                <td>翻译(日照校区)</td>
+                <td>7</td>
+                <td>25</td>
+                <td>20</td>
+                <td>75</td>
+                <td>73</td>
+                <td>491</td>
+                <td>190267</td>
+                <td>532</td>
+                <td>87265</td>
+                <td class="decrease">招生人数大幅减少</td>
+            </tr>
+            <tr>
+                <td>吉林财经大学</td>
+                <td>20</td>
+                <td>朝鲜语</td>
+                <td>5</td>
+                <td>25</td>
+                <td>2</td>
+                <td></td>
+                <td></td>
+                <td>493</td>
+                <td>183920</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>临沂大学</td>
+                <td>23</td>
+                <td>电子商务</td>
+                <td>2</td>
+                <td>25</td>
+                <td>139</td>
+                <td>96</td>
+                <td>30</td>
+                <td>505</td>
+                <td>157763</td>
+                <td>503</td>
+                <td>144227</td>
+                <td class="increase-large">招生计划大幅增加</td>
+            </tr>
+            <tr>
+                <td>浙江外国语学院</td>
+                <td>11</td>
+                <td>旅游管理(全英教学)(保底)</td>
+                <td>15</td>
+                <td>26</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -359,8 +623,56 @@
                 <td></td>
             </tr>
             <tr>
-                <td>大连民族大学</td>
-                <td>国际商务</td>
+                <td>临沂大学</td>
+                <td>23</td>
+                <td>应用心理学</td>
+                <td>3</td>
+                <td>26</td>
+                <td>60</td>
+                <td>46</td>
+                <td>45</td>
+                <td>516</td>
+                <td>134072</td>
+                <td>514</td>
+                <td>120884</td>
+                <td class="increase-small">招生计划增加</td>
+            </tr>
+            <tr>
+                <td>北方民族大学(宁夏回族自治区)</td>
+                <td>24</td>
+                <td>电子商务</td>
+                <td>2</td>
+                <td>26</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>510</td>
+                <td>145331</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>齐鲁工业大学</td>
+                <td>22</td>
+                <td>翻译</td>
+                <td>7</td>
+                <td>29</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>江西师范大学</td>
+                <td>21</td>
+                <td>国际经济与贸易(数字贸易)</td>
+                <td>10</td>
+                <td>31</td>
                 <td></td>
                 <td></td>
                 <td></td>
