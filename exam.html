@@ -135,22 +135,23 @@
         <br>
         <thead>
             <tr>
-                <th>序号</th>
-                <th>大学</th>
-                <th>学校顺位</th>
-                <th>专业</th>
-                <th>专业顺位</th>
-                <th>学校+专业总顺位</th>
-                <th>2024招生计划数</th>
-                <th>2023招生计划数</th>
-                <th>2022招生计划数</th>
-                <th>2023最低分</th>
-                <th>2023最低位次</th>
-                <th>2022最低分</th>
-                <th>2022最低位次</th>
-                <th>备注</th>
+                <th onclick="sortTable(0)">序号</th>
+                <th onclick="sortTable(1)">大学</th>
+                <th onclick="sortTable(2)">学校顺位</th>
+                <th onclick="sortTable(3)">专业</th>
+                <th onclick="sortTable(4)">专业顺位</th>
+                <th onclick="sortTable(5)">学校+专业总顺位</th>
+                <th onclick="sortTable(6)">2024招生计划数</th>
+                <th onclick="sortTable(7)">2023招生计划数</th>
+                <th onclick="sortTable(8)">2022招生计划数</th>
+                <th onclick="sortTable(9)">2023最低分</th>
+                <th onclick="sortTable(10)">2023最低位次</th>
+                <th onclick="sortTable(11)">2022最低分</th>
+                <th onclick="sortTable(12)">2022最低位次</th>
+                <th onclick="sortTable(13)">备注</th>
             </tr>
         </thead>
+
         <tbody>
             <tr>
                 <td>1</td>
@@ -797,6 +798,56 @@
                     });
                 }
             });
+        }
+        function sortTable(n) {
+            var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+            table = document.querySelector("table");
+            switching = true;
+            dir = "asc"; 
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+                    x = rows[i].getElementsByTagName("TD")[n];
+                    y = rows[i + 1].getElementsByTagName("TD")[n];
+                    if (dir == "asc") {
+                        if (isNaN(x.innerHTML) || isNaN(y.innerHTML)) {
+                            if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        } else {
+                            if (Number(x.innerHTML) > Number(y.innerHTML)) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                    } else if (dir == "desc") {
+                        if (isNaN(x.innerHTML) || isNaN(y.innerHTML)) {
+                            if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        } else {
+                            if (Number(x.innerHTML) < Number(y.innerHTML)) {
+                                shouldSwitch = true;
+                                break;
+                            }
+                        }
+                    }
+                }
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    switchcount ++;      
+                } else {
+                    if (switchcount == 0 && dir == "asc") {
+                        dir = "desc";
+                        switching = true;
+                    }
+                }
+            }
         }
     </script>
 </body>
