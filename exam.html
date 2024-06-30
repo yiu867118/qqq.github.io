@@ -16,12 +16,6 @@
             margin-bottom: 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        h2, h4{
-          text-align: center;
-          text-shadow: #030303 5px;
-          font-weight: 600;
-          width: 100%;
-        }
         th, td {
             padding: 12px 15px;
             text-align: center;
@@ -34,54 +28,43 @@
             background-color: #f3f3f3;
         }
         tr:hover {
-            background-color: #7ed1f8;
-        } 
-        .increase-large {
-            background-color: rgb(41, 155, 41);
-            color: white;
+            background-color: #73c1f5;
         }
-        .increase-small {
-            background-color: lightgreen;
-        }
-        .no-change {
-            background-color: rgb(136, 216, 248);
-            color: white;
-        }
-        .decrease {
-            background-color: rgb(248, 164, 164);
-            color: white;
-        }
+        caption {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }    
+
 
         #div{
             background: linear-gradient(to right, #f8fafb, hsl(203, 76%, 97%));
+            margin-left: 1%;
+            margin-right: 1%;
+            margin: 10px auto;
             padding: 20px;
             border-radius: 60px;
-            width: 98%;
-            box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+            width: 90%;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
             text-align: center;
-            line-height: 1.9;
-            font-size: 15px;
+            line-height: 1.8;
+            font-size: 19px;
             font-weight: 600;
         }
         #toggleButton {
             background: linear-gradient(to right, #c5dbe9, #a4cadf);
             color: #fff;
             border: none;
-            padding: 10px 15px;
-            border-radius: 30px;
+            padding: 10px 18px;
+            border-radius: 5px;
             cursor: pointer;
             margin: 10px; 
             display: inline-block; 
-            font-size: 12px;
+            font-size: 16px;
         }
         #toggleButton:hover{
             background: linear-gradient(to right, #40b9ec, #3bb1e4); 
 
-        }
-        th:hover{
-            transform: scale(1.05);
-            transition: transform 0.3s ease;
-            cursor: pointer;
         }
         .positive {
             color: green;
@@ -100,8 +83,6 @@
 
 
 <body>
- <h2> 傻蛋志愿填报参考信息表 <h4>(点击列名称 即可排序)</h4></h2>
- <hr>
 <div id="div">
         <form id="columnForm">
             <fieldset>
@@ -128,7 +109,10 @@
         <button id="toggleButton">确定</button>
         
     </div>
-    <table>      
+    <table>
+        <caption>傻蛋志愿填报参考信息表</caption>
+        <br>
+        <br>
         <br>
         <thead>
             <tr style="text-align: right;">
@@ -153,8 +137,6 @@
 
         
   <tbody>
-
-
     <tr>
       <td>1</td>
       <td>北京第二外国语学院</td>
@@ -895,24 +877,6 @@
     </tr>
     <tr>
       <td>42</td>
-      <td>哈尔滨理工大学</td>
-      <td>11</td>
-      <td>日语(办学地点:山东省荣成市)</td>
-      <td>25</td>
-      <td>36</td>
-      <td>8</td>
-      <td>8</td>
-      <td>8</td>
-      <td>509</td>
-      <td>148798</td>
-      <td>514</td>
-      <td>120884</td>
-      <td>0</td>
-      <td>148798</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>43</td>
       <td>烟台大学</td>
       <td>25</td>
       <td>国际经济与贸易</td>
@@ -930,7 +894,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>44</td>
+      <td>43</td>
       <td>青岛农业大学</td>
       <td>9</td>
       <td>物流管理</td>
@@ -948,7 +912,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>45</td>
+      <td>44</td>
       <td>烟台大学</td>
       <td>25</td>
       <td>英语(外语语种为英语)</td>
@@ -966,7 +930,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>46</td>
+      <td>45</td>
       <td>华北理工大学</td>
       <td>31</td>
       <td>医疗保险</td>
@@ -984,7 +948,7 @@
       <td>1</td>
     </tr>
     <tr>
-      <td>47</td>
+      <td>46</td>
       <td>吉林财经大学</td>
       <td>33</td>
       <td>朝鲜语</td>
@@ -1002,7 +966,7 @@
       <td>1</td>
     </tr>
     <tr>
-      <td>48</td>
+      <td>47</td>
       <td>山东第二医科大学(原潍坊医学院)</td>
       <td>26</td>
       <td>英语</td>
@@ -1020,7 +984,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>49</td>
+      <td>48</td>
       <td>黑龙江大学</td>
       <td>35</td>
       <td>朝鲜语</td>
@@ -1038,7 +1002,7 @@
       <td>1</td>
     </tr>
     <tr>
-      <td>50</td>
+      <td>49</td>
       <td>烟台大学</td>
       <td>25</td>
       <td>新闻学</td>
@@ -1056,7 +1020,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>51</td>
+      <td>50</td>
       <td>浙江外国语学院</td>
       <td>37</td>
       <td>朝鲜语</td>
@@ -1074,7 +1038,7 @@
       <td>1</td>
     </tr>
     <tr>
-      <td>52</td>
+      <td>51</td>
       <td>长春理工大学</td>
       <td>38</td>
       <td>朝鲜语</td>
@@ -1092,7 +1056,7 @@
       <td>1</td>
     </tr>
     <tr>
-      <td>53</td>
+      <td>52</td>
       <td>山东第二医科大学(原潍坊医学院)</td>
       <td>26</td>
       <td>公共事业管理</td>
@@ -1110,7 +1074,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>54</td>
+      <td>53</td>
       <td>长春师范大学</td>
       <td>39</td>
       <td>朝鲜语</td>
@@ -1128,7 +1092,7 @@
       <td>1</td>
     </tr>
     <tr>
-      <td>55</td>
+      <td>54</td>
       <td>鲁东大学</td>
       <td>41</td>
       <td>心理学(师范类)</td>
@@ -1146,7 +1110,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>56</td>
+      <td>55</td>
       <td>鲁东大学</td>
       <td>41</td>
       <td>朝鲜语</td>
@@ -1164,7 +1128,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>57</td>
+      <td>56</td>
       <td>山东政法学院</td>
       <td>47</td>
       <td>知识产权</td>
@@ -1182,7 +1146,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>58</td>
+      <td>57</td>
       <td>山东政法学院</td>
       <td>47</td>
       <td>法学（三个班级）</td>
@@ -1200,7 +1164,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>59</td>
+      <td>58</td>
       <td>烟台大学</td>
       <td>25</td>
       <td>日语(外语语种为英语)</td>
@@ -1218,7 +1182,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>60</td>
+      <td>59</td>
       <td>鲁东大学</td>
       <td>41</td>
       <td>经济学</td>
@@ -1236,7 +1200,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>61</td>
+      <td>60</td>
       <td>山东政法学院</td>
       <td>47</td>
       <td>数字出版</td>
@@ -1254,7 +1218,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>62</td>
+      <td>61</td>
       <td>聊城大学</td>
       <td>55</td>
       <td>知识产权</td>
@@ -1272,7 +1236,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>63</td>
+      <td>62</td>
       <td>山东政法学院</td>
       <td>47</td>
       <td>网络与新媒体</td>
@@ -1290,6 +1254,24 @@
       <td></td>
     </tr>
     <tr>
+      <td>63</td>
+      <td>山东政法学院</td>
+      <td>47</td>
+      <td>经济学</td>
+      <td>10</td>
+      <td>57</td>
+      <td>40</td>
+      <td>30</td>
+      <td>30</td>
+      <td>514</td>
+      <td>138189</td>
+      <td>505</td>
+      <td>139714</td>
+      <td>10</td>
+      <td>184252</td>
+      <td></td>
+    </tr>
+    <tr>
       <td>64</td>
       <td>山东政法学院</td>
       <td>47</td>
@@ -1309,24 +1291,6 @@
     </tr>
     <tr>
       <td>65</td>
-      <td>山东政法学院</td>
-      <td>47</td>
-      <td>经济学</td>
-      <td>10</td>
-      <td>57</td>
-      <td>40</td>
-      <td>30</td>
-      <td>30</td>
-      <td>514</td>
-      <td>138189</td>
-      <td>505</td>
-      <td>139714</td>
-      <td>10</td>
-      <td>184252</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>66</td>
       <td>山东政法学院</td>
       <td>47</td>
       <td>审计学</td>
@@ -1344,7 +1308,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>67</td>
+      <td>66</td>
       <td>山东政法学院</td>
       <td>47</td>
       <td>大数据与财务管理</td>
@@ -1362,7 +1326,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>68</td>
+      <td>67</td>
       <td>浙江外国语学院</td>
       <td>37</td>
       <td>旅游管理(全英教学)(保底)</td>
@@ -1380,7 +1344,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>69</td>
+      <td>68</td>
       <td>临沂大学</td>
       <td>53</td>
       <td>应用心理学</td>
@@ -1398,7 +1362,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>70</td>
+      <td>69</td>
       <td>山东政法学院</td>
       <td>47</td>
       <td>国际经济与贸易</td>
@@ -1416,7 +1380,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>71</td>
+      <td>70</td>
       <td>山东政法学院</td>
       <td>47</td>
       <td>新闻学(法治新闻方向)</td>
@@ -1434,7 +1398,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>72</td>
+      <td>71</td>
       <td>临沂大学</td>
       <td>53</td>
       <td>电子商务</td>
@@ -1452,7 +1416,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>73</td>
+      <td>72</td>
       <td>天津体育学院</td>
       <td>57</td>
       <td>康复治疗学</td>
@@ -1470,7 +1434,7 @@
       <td>1</td>
     </tr>
     <tr>
-      <td>74</td>
+      <td>73</td>
       <td>鲁东大学</td>
       <td>41</td>
       <td>旅游管理</td>
@@ -1488,7 +1452,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>75</td>
+      <td>74</td>
       <td>山东政法学院</td>
       <td>47</td>
       <td>财务管理</td>
@@ -1506,7 +1470,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>76</td>
+      <td>75</td>
       <td>江西师范大学</td>
       <td>51</td>
       <td>国际经济与贸易(数字贸易)</td>
@@ -1524,7 +1488,7 @@
       <td>1</td>
     </tr>
     <tr>
-      <td>77</td>
+      <td>76</td>
       <td>济宁医学院</td>
       <td>59</td>
       <td>应用心理学</td>
@@ -1542,7 +1506,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>78</td>
+      <td>77</td>
       <td>北华大学</td>
       <td>40</td>
       <td>西班牙语</td>
@@ -1560,7 +1524,7 @@
       <td>1</td>
     </tr>
     <tr>
-      <td>79</td>
+      <td>78</td>
       <td>鲁东大学</td>
       <td>41</td>
       <td>社会工作</td>
@@ -1578,7 +1542,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>80</td>
+      <td>79</td>
       <td>东北石油大学</td>
       <td>45</td>
       <td>旅游管理</td>
@@ -1596,7 +1560,7 @@
       <td>1</td>
     </tr>
     <tr>
-      <td>81</td>
+      <td>80</td>
       <td>济宁学院</td>
       <td>61</td>
       <td>心理学</td>
@@ -1614,7 +1578,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>82</td>
+      <td>81</td>
       <td>济宁学院</td>
       <td>61</td>
       <td>心理咨询</td>
@@ -1632,7 +1596,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>83</td>
+      <td>82</td>
       <td>天津体育学院</td>
       <td>57</td>
       <td>体育经济与管理</td>
@@ -1650,7 +1614,7 @@
       <td>1</td>
     </tr>
     <tr>
-      <td>84</td>
+      <td>83</td>
       <td>滨州医学院</td>
       <td>63</td>
       <td>应用心理学</td>
@@ -1668,7 +1632,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>85</td>
+      <td>84</td>
       <td>山东交通学院(济南)</td>
       <td>60</td>
       <td>金融学</td>
@@ -1686,7 +1650,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>86</td>
+      <td>85</td>
       <td>济宁学院</td>
       <td>61</td>
       <td>经济学</td>
@@ -1704,7 +1668,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>87</td>
+      <td>86</td>
       <td>济宁学院</td>
       <td>61</td>
       <td>互联网金融</td>
@@ -1722,7 +1686,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>88</td>
+      <td>87</td>
       <td>滨州医学院</td>
       <td>63</td>
       <td>健康服务与管理</td>
@@ -1740,7 +1704,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>89</td>
+      <td>88</td>
       <td>潍坊学院</td>
       <td>67</td>
       <td>应用心理学</td>
@@ -1758,7 +1722,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>90</td>
+      <td>89</td>
       <td>济宁医学院</td>
       <td>59</td>
       <td>英语</td>
@@ -1776,7 +1740,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>91</td>
+      <td>90</td>
       <td>山东石油化工学院</td>
       <td>65</td>
       <td>数字经济</td>
@@ -1794,7 +1758,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>92</td>
+      <td>91</td>
       <td>山东工商学院</td>
       <td>69</td>
       <td>电子商务</td>
@@ -1812,7 +1776,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>93</td>
+      <td>92</td>
       <td>齐鲁师范学院(济南)</td>
       <td>71</td>
       <td>心理学(师范类)</td>
@@ -1830,7 +1794,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>94</td>
+      <td>93</td>
       <td>山东工商学院</td>
       <td>69</td>
       <td>资产评估</td>
@@ -1848,7 +1812,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>95</td>
+      <td>94</td>
       <td>山东工商学院</td>
       <td>69</td>
       <td>金融学</td>
@@ -1866,7 +1830,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>96</td>
+      <td>95</td>
       <td>齐鲁师范学院(济南)</td>
       <td>71</td>
       <td>统计与会计核算</td>
@@ -1884,7 +1848,7 @@
       <td></td>
     </tr>
     <tr>
-      <td>97</td>
+      <td>96</td>
       <td>齐鲁师范学院(济南)</td>
       <td>71</td>
       <td>经济与金融</td>
@@ -1921,7 +1885,7 @@
                         planCell.style.color = `rgb(0, ${Math.min(255, planValue * 5)}, 0)`; // Fix rgb format
                     } else if (planValue < 0) {
                         planCell.classList.add('negative');
-                        planCell.style.color = `rgb(${Math.min(255, Math.abs(planValue) * 5)}, 165, 0)`; // Fix rgb format
+
                     } else if (planValue === 0) {
                         planCell.classList.add('zero');
                         planCell.style.color = 'rgb(192, 192, 192)'; // Blue color for zero
