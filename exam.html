@@ -16,6 +16,14 @@
             margin-bottom: 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
+        h2{
+            font-size: 28px;
+            font-weight: 600;
+            text-shadow: #f7f8f8 2px 2px 10px;
+            text-align: center;
+            width: 100%;
+
+        }
         th, td {
             padding: 12px 15px;
             text-align: center;
@@ -24,11 +32,24 @@
             background-color: #c4edfa;
             color: #030303;
         }
+        th:hover{
+            transform: scale(1.04);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
         tr:nth-child(even) {
             background-color: #f3f3f3;
         }
         tr:hover {
-            background-color: #73c1f5;
+            background-color: #8bccf8;
+            transform: scale(1.001);
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+        div:hover{
+            transform: scale(1.001);
+            transition: transform 0.3s ease;
+            cursor: pointer;
         }
         caption {
             margin-bottom: 10px;
@@ -44,7 +65,7 @@
             margin: 10px auto;
             padding: 20px;
             border-radius: 60px;
-            width: 90%;
+            width: 98%;
             box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
             text-align: center;
             line-height: 1.8;
@@ -83,6 +104,8 @@
 
 
 <body>
+<h2>傻蛋志愿填报参考信息表</h3>
+<hr>
 <div id="div">
         <form id="columnForm">
             <fieldset>
@@ -103,17 +126,12 @@
                 <label><input type="checkbox" name="column" value="招生计划" checked>招生计划</label>
                 <label><input type="checkbox" name="column" value="24预测位次" checked>24预测位次(仅供参考)</label>
                 <label><input type="checkbox" name="column" value="省外" checked>省外</label>
-            </fieldset>
-            
+            </fieldset>         
         </form>
         <button id="toggleButton">确定</button>
         
     </div>
     <table>
-        <caption>傻蛋志愿填报参考信息表</caption>
-        <br>
-        <br>
-        <br>
         <thead>
             <tr style="text-align: right;">
             <th  onclick="sortTable(0)">序号</th>
@@ -134,7 +152,7 @@
             <th  onclick="sortTable(15)">省外</th>
             </tr>
         </thead>
-
+        <br>
         
   <tbody>
     <tr>
