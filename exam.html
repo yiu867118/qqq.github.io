@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>志愿探险记</title>
     <style>
-        #con{
+        #con {
             max-width: 98%;
             margin: 10px auto;
             background-color: #fff;
@@ -25,6 +25,18 @@
             border-collapse: collapse;
             margin-bottom: 20px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        /* 确保表格在小屏幕上可以滚动 */
+        #con {
+            overflow-x: auto;
+        }
+        /* 使用媒体查询为小屏幕设置样式 */
+        @media (max-width: 600px) {
+            table {
+                width: 100%;
+                display: block;
+                overflow-x: auto;
+            }
         }
         h2{
             background: linear-gradient(to right, #bcddee, hsl(202, 60%, 64%));
