@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>志愿探险记</title>
     <style>
+        #con{
+            max-width: 98%;
+            margin: 10px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 10px;
+        }
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
@@ -50,7 +59,7 @@
             transition: transform 0.3s ease;
             cursor: pointer;
         }
-        div:hover{
+        div:hover, h2:hover{
             transform: scale(1.001);
             transition: transform 0.3s ease;
             cursor: pointer;
@@ -109,6 +118,7 @@
 
 
 <body>
+<div id="con">
 <h2><br>* 志愿填报奇遇记*<br><br></h3>
 <hr>
 <div id="div">
@@ -1990,6 +2000,7 @@
     </tr>
   </tbody>
 </table>
+</div>
     <script>
 
     document.addEventListener('DOMContentLoaded', function() {
